@@ -25,8 +25,7 @@ SELECT   TOP 20
 	COUNT(*)  As Number_of_Views
 
 FROM 	
-	SALES.USERS_VIDEOS  UV  INNER JOIN 	SALES.SUBSCRIBERS S  ON  UV.subscriber_id = S.subscriber_id 
-							INNER JOIN  PRODUCTION.VIDEOS V  ON  UV.video_id      = V.video_id
+	SALES.USERS_VIDEOS UV INNER JOIN SALES.SUBSCRIBERS S ON UV.subscriber_id = S.subscriber_id INNER JOIN PRODUCTION.VIDEOS V ON UV.video_id = V.video_id
 
-GROUP BY     V.video_id,	S.subscriber_id,	S.first_name,	 S.last_name, S.email, V.name
+GROUP BY     V.video_id, S.subscriber_id, S.first_name, S.last_name, S.email, V.name
 ORDER BY     Number_of_Views    DESC;

@@ -1,3 +1,14 @@
+/*
+--------------------------------------------------------------------
+© 2019 LIFION PROJECT: VIDEO STREAMING SERVICE 
+AUTHOR: Alseny Sylla (alsenys600@gmail.com)
+--------------------------------------------------------------------
+Name   : VideStreamService
+Link   : https://github.com/senyboy10/VideoStreamingService/blob/master/video_streaming_database-load.sql
+Version: 1.0
+--------------------------------------------------------------------
+*/
+
 use VideoStreamingService;
 
 --------------------------------------------------------------------------------------------------------
