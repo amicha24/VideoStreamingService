@@ -4,7 +4,7 @@
 AUTHOR: Alseny Sylla (alsenys600@gmail.com)
 --------------------------------------------------------------------
 Name   : VideStreamService
-Link   : https://github.com/senyboy10/VideoStreamingService/blob/master/video_streaming_database-video-user-pairing.sql
+Link   : https://github.com/senyboy10/VideoStreamingService/blob/master/find_top_20_user_video_pairing.sql
 Version: 1.0
 
 DESCRIPTION:

@@ -16,7 +16,7 @@ SET IDENTITY_INSERT SALES.PLANS ON;
 INSERT INTO SALES.PLANS(plan_id, plan_name, cycle_price_in_cent, amount_streaming_per_cycle_in_sec, cycle_length_in_sec, is_monthly,hd_available,ultra_hd_available,max_screen) VALUES(1, 'Basic', 	499,	144000,		2592000,	1,	1,	0, 1  )
 INSERT INTO SALES.PLANS(plan_id, plan_name, cycle_price_in_cent, amount_streaming_per_cycle_in_sec, cycle_length_in_sec, is_monthly,hd_available,ultra_hd_available,max_screen) VALUES(2, 'Standard',999,	360000,		2592000,	1,	1,	1, 2  )
 INSERT INTO SALES.PLANS(plan_id, plan_name, cycle_price_in_cent, amount_streaming_per_cycle_in_sec, cycle_length_in_sec, is_monthly,hd_available,ultra_hd_available,max_screen) VALUES(3, 'Premium', 1499,	1440000,	2592000,	1,	1,	1, 4  )
-SET IDENTITY_INSERT PRODUCTION.PLANS OFF;
+SET IDENTITY_INSERT SALES.PLANS OFF;
 
 
 SET IDENTITY_INSERT SALES.SUBSCRIPTIONS ON;

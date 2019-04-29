@@ -1,3 +1,4 @@
+use VideoStreamingService;
 /*
 --------------------------------------------------------------------
 © 2019 LIFION PROJECT: VIDEO STREAMING SERVICE 
@@ -9,11 +10,19 @@ Version: 1.0
 --------------------------------------------------------------------
 */
 
-CREATE SCHEMA PRODUCTION;
-go
+-- create schemas
 
-CREATE SCHEMA SALES;
-go
+
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'PRODUCTION')
+  BEGIN
+    EXEC ('CREATE SCHEMA PRODUCTION;');
+  END;
+GO
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'SALES')
+  BEGIN
+    EXEC ('CREATE SCHEMA SALES;');
+  END;
+GO
 
 
 CREATE TABLE SALES.PLANS (
@@ -142,8 +151,8 @@ CREATE TABLE SALES.USER_PLAN_HISTORY (
   subscriber_id INT NOT NULL,
   plan_id INT NOT NULL,
   date_modified DATETIME,
-  FOREIGN KEY (subscriber_id) REFERENCES SALES.SUBSCRIBERS (subscriber_id)  ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (plan_id) REFERENCES SALES.SUBSCRIBERS (subscriber_id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (subscriber_id) REFERENCES SALES.SUBSCRIBERS (subscriber_id)  ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY (plan_id) REFERENCES SALES.SUBSCRIBERS (subscriber_id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
 
